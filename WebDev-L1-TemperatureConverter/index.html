@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempora | Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>Tempora<span>.</span></h2>
+        <p>CONVERSION, MADE EFFORTLESS</p>
+    </header>
+
+    <main class="converter-container">
+        <div class="heading">
+            <p class="tag">CONVERT WITH EASE</p>
+            <h1>Temperature <span>Converter.</span></h1>
+            <p>Switch between Celsius, Fahrenheit and Kelvin instantly.</p>
+        </div>
+
+        <section class="converter-card">
+
+            <label for="temperature">Enter temperature</label>
+            <input type="number" id="temperature"
+                   placeholder="Enter a value" step="any">
+
+                   <div class="quick-references">
+    <p>QUICK REFERENCES</p>
+
+    <div class="reference-buttons">
+        <button type="button" class="quick-temp" data-value="0">
+            Freezing · 0°C
+        </button>
+
+        <button type="button" class="quick-temp" data-value="25">
+            Room · 25°C
+        </button>
+
+        <button type="button" class="quick-temp" data-value="37">
+            Body · 37°C
+        </button>
+
+        <button type="button" class="quick-temp" data-value="100">
+            Boiling · 100°C
+        </button>
+    </div>
+</div>
+
+            <div class="unit-selection">
+                <div>
+                    <label for="from-unit">From</label>
+                    <select id="from-unit">
+                        <option value="C">Celsius (°C)</option>
+                        <option value="F">Fahrenheit (°F)</option>
+                        <option value="K">Kelvin (K)</option>
+                    </select>
+                </div>
+
+                <button id="swap-btn" type="button" title="Swap units">⇄</button>
+
+                <div>
+                    <label for="to-unit">To</label>
+                    <select id="to-unit">
+                        <option value="F">Fahrenheit (°F)</option>
+                        <option value="C">Celsius (°C)</option>
+                        <option value="K">Kelvin (K)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="convert-btn" class="convert-btn" type="button">
+                Convert Temperature →
+            </button>
+
+            <div class="result-box" aria-live="polite">
+                <p>CONVERSION RESULT</p>
+                <h2 id="result">--</h2>
+                <span id="result-label">Your result will appear here</span>
+            </div>
+
+            <p id="error-message" role="alert"></p>
+
+            <button id="reset-btn" class="reset-btn" type="button">
+                Clear / Reset
+            </button>
+
+        </section>
+
+        <footer>
+            <p>Designed & built by Gorle Monisha · 2026</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
